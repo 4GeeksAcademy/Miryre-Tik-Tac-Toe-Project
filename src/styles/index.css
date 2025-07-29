@@ -1,11 +1,105 @@
-/* 
+/* Reset and base styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  /* Game container */
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Each square */
+  .square {
+    width: 100px;
+    height: 100px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+  
+  .square:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+  }
+  
+  .square:disabled {
+    cursor: default;
+    background-color: #ddd;
+  }
+  
+  /* Game status */
+  .status {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  /* Optional reset button */
+  .reset-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .reset-button:hover {
+    background-color: #0056b3;
+  }
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+  .setup {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 20px;
+}
 
-*/
+.setup input {
+	padding: 10px;
+	font-size: 1rem;
+	width: 200px;
+	border-radius: 6px;
+	border: 1px solid #ccc;
+}
+
+.start-button {
+	padding: 10px 20px;
+	background-color: #28a745;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 1rem;
+	transition: background-color 0.2s;
+}
+
+.start-button:hover {
+	background-color: #218838;
+}
+
+
